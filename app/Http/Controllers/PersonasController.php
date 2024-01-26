@@ -108,10 +108,22 @@ class PersonasController extends Controller
         return redirect()->route("personas.index")->with("success", "Registro eliminado con exito!");
     }
 
+    public function search($id)
+    {
+        //buscar comunidad he info
+        //
+        
+        $comunidades = Comunidades::find($id);
+        return view('buscarComunidad', compact('comunidades'));
+        
+
+        
+    }
+
 
     public function showInfo($id) 
     {
-        
+        //buscar personas en la comunidad indicada
         $personas = Personas::where('comunidad_id', '=',$id)->get();
         $comunidades = Comunidades::all();
 

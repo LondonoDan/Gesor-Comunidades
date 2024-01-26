@@ -6,7 +6,7 @@
 
 
 <div class="card">
-  <h5 class="card-header">Registro de usuarios</h5>
+  <h5 class="card-header">Registro de usuarios <i class="fa-solid fa-users"></i></h5>
   @csrf
     <div class="card-body">
     
@@ -21,11 +21,12 @@
                     <th>Edad</th>
                     <th>Documento</th>
                     <th>Telefono</th>
-                    <th>Comunidad</th>
                     <th>Correo electronico</th>
+                    <th>Comunidad</th>
+                    <th>Información de la comunidad</th>
                     <th>Editar</th>
                     <th>Agregar una comunidad al usuario</th>
-                    <th>Eliminar</th>
+                    <th>Eliminar registro usuario</th>
                 </thead>
                 <tbody>
                     @foreach ($datos as $item)
@@ -36,30 +37,41 @@
                         <td>{{$item->edad}}</td>
                         <td>{{$item->documento}}</td>
                         <td>{{$item->telefono}}</td>
-                        <td>{{$item->comunidad->nombre}}</td>
                         <td>{{$item->correo_electronico}}</td>
+                        <td>{{$item->comunidad->nombre}}</td>
+                        <td>
+                            <center><form action="{{route('personas.search', $item->comunidad->id)}}" method="GET">
+                                <button class="btn bttn-warning btn-sm" >
+                                <i class="fa-solid fa-house fa-xl"></i>
+                                </button>
+                            </form></center>
+                        
                         <td>
                             <form action="{{route('personas.edit', $item->id)}}" method="GET">
                                 <button class="btn bttn-warning btn-sm" >
-                                    <i class="fa-solid fa-person-circle-plus fa-xl"></i>
+                                        <i class="fa-solid fa-pen fa-xl" ></i>
                                 </button>
                             </form>
                         </td>
                         <td>
+                            <center>
                             <form action="{{route('personas.edit', $item->id)}}" method="GET">
                                 
                                 <button class="btn bttn-danger btn-sm">
-                                    <i class="fa-solid fa-person-circle-plus fa-xl" style="color: #0000FF;"></i>
+                                <i class="fa-solid fa-house-user fa-xl " style="color: #0000FF;"></i>
                                 </button>
                             </form>
+                            </center>
                         </td>
                         <td>
+                            <center>
                             <form action="{{route('personas.destroy', $item->id)}}" method="GET">
                                 
                                 <button class="btn bttn-danger btn-sm">
                                     <i class="fa-solid fa-circle-xmark fa-xl" style="color: #aa2727;"></i>
                                 </button>
                             </form>
+                            </center>
                         </td>
                     </tr>
                     @endforeach

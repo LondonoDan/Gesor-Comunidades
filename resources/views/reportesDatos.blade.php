@@ -24,7 +24,7 @@
             @endforeach
             </select>
             <div class="">
-                <input type="submit" class="btn btn-primary" value="Buscar">
+                <a href=""><input type="submit" class="btn btn-primary" value="Buscar"></a>
             </div>
             <br><br>
 

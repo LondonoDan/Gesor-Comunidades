@@ -55,3 +55,5 @@ Route::get('/deleted/{id}',[ComunidadesController::class,'deleted'])->name('comu
 //ruta donde se elimina
 Route::get('/remove/{id}',[ComunidadesController::class,'remove'])->name('comunidades.remove');
 
+//ruta para buscar info comunidad
+Route::get('/search/{id}',[PersonasController::class,'search'])->name('personas.search');

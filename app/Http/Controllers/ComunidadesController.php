@@ -84,6 +84,10 @@ class ComunidadesController extends Controller
         return view ('eliminarComunidad', compact('comunidades'));
     }
 
+  
+
+
+
     public function remove($id)
     {
         //Funcion para eliminar el dato completamente
