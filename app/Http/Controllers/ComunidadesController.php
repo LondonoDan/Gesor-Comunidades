@@ -13,6 +13,7 @@ class ComunidadesController extends Controller
     public function index()
     {
         //inicio
+        
     }
 
     

@@ -1,6 +1,7 @@
 <?php
 use App\Http\Controllers\PersonasController;
 use App\Http\Controllers\ComunidadesController;
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -57,3 +58,10 @@ Route::get('/remove/{id}',[ComunidadesController::class,'remove'])->name('comuni
 
 //ruta para buscar info comunidad
 Route::get('/search/{id}',[PersonasController::class,'search'])->name('personas.search');
+
+
+//Login
+
+Route::get('/showLoginForm', [AuthController::class, 'showLoginForm'])->name('user.showLoginForm');
+Route::post('/login', [AuthController::class, 'login'])->name('user.login');;
+Route::post('/logout', [AuthController::class, 'logout'])->name('users.logout');

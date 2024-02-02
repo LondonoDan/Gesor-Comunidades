@@ -13,11 +13,11 @@ class PersonasController extends Controller
     public function index()
     {
         //Inicio de la pagina
-        
         return view ('inicio');
+        
     }
 
-    
+
     public function create()
     {
         //Método para agregar datos

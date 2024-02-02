@@ -77,7 +77,11 @@
                     @endforeach
                 </tbody>
             </table>
+
+        <a href="{{route('comunidades.see')}}" style="color: #000000">Mostrar registro de las comunidades 
+        <i class="fa-solid fa-shop fa-lg"></i></a>
         </div>
+
         <a href="{{route('personas.index')}}">
             <i class="fa-solid fa-rotate-left fa-lg"></i>Regresar al inicio</a>
         

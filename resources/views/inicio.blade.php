@@ -21,10 +21,8 @@
 
         <a href="{{route('personas.create')}}" style="color: #000000">Agregar un nuevo registro de usuario
         <i class="fa-solid fa-user-plus"></i></a>
-        <a href="{{route('personas.show')}}" style="color: #000000">Mostrar registros de usuarios 
-        <i class="fa-solid fa-address-book fa-lg"></i></a>
-        <a href="{{route('comunidades.see')}}" style="color: #000000">Mostrar registro de las comunidades 
-        <i class="fa-solid fa-shop fa-lg"></i></a>
+        <br><br>
+        <a href="{{route('user.showLoginForm')}}">Iniciar sesion</a>
         
 
 
